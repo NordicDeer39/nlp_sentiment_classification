@@ -4,6 +4,6 @@ This project focuses on sentiment classification of Iranian tweets during the CO
 
 ## Project Overview
 
-We collected a dataset of Iranian tweets related to COVID-19 and preprocessed it to remove noise such as hashtags, @mentions, IDs, and stopwords. ParsBERT, a specialized model for the Persian language, is utilized to perform the sentiment analysis task, categorizing tweets into different sentiment classes such as positive, negative, and neutral.
+I used a collected dataset of Iranian tweets related to COVID-19 and preprocessed it to remove noise such as hashtags, @mentions, IDs, and stopwords. ParsBERT, a specialized model for the Persian language, is utilized to perform the sentiment analysis task, categorizing tweets into different sentiment classes such as positive, negative, and neutral.
 
 
