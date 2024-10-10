@@ -127,7 +127,7 @@ model.save_pretrained("path_to_save_model")
 tokenizer.save_pretrained("path_to_save_model")
 
 # Predict on new data
-new_texts = ["واقعا چندساله قرنطینه ست"]  # Replace with actual tweet
+new_texts = ["واقعا چندساله قرنطینه ست"]  
 new_encodings = tokenizer(new_texts, truncation=True, padding=True, max_length=128, return_tensors="pt")
 outputs = model(**new_encodings)
 predictions = torch.argmax(outputs.logits, dim=-1)
@@ -174,7 +174,7 @@ def getlabel(input):
     return labels.get(input, 0)
 
 # Load and preprocess your dataset
-dataset_path = "dataset.tsv"  # Replace with your dataset path
+dataset_path = "dataset.tsv"  
 data = pd.read_csv(dataset_path, delimiter="\t", header=None, names=["label", "text"])
 
 # Preprocess text data
@@ -224,8 +224,8 @@ training_args = TrainingArguments(
     logging_dir='./logs',
     logging_steps=10,
     evaluation_strategy="epoch",
-    report_to='none',  # To avoid logging issues in colab
-    fp16=True  # Enable mixed precision training for faster training
+    report_to='none', 
+    fp16=True 
 )
 
 # Define compute_metrics function for evaluation
@@ -257,7 +257,7 @@ model.save_pretrained("path_to_save_model")
 tokenizer.save_pretrained("path_to_save_model")
 
 # Predict on new data
-new_texts = ["واقعا چندساله قرنطینه ست"]  # Replace with actual tweet
+new_texts = ["واقعا چندساله قرنطینه ست"]  
 new_encodings = tokenizer(new_texts, truncation=True, padding=True, max_length=128, return_tensors="pt").to('cuda')  # Move to GPU
 outputs = model(**new_encodings)
 predictions = torch.argmax(outputs.logits, dim=-1)
